@@ -96,7 +96,7 @@ def main():
         raise ValueError("Tokenizer does not have pad token, please add pad token to tokenizer.")
 
     if args.arch == "class-2layers":
-        elif 'qwen' in args.model_path.lower():
+        if 'qwen' in args.model_path.lower():
             print0("Using Qwen2ForSequenceClassificationPlus model")
             model = Qwen2ForSequenceClassificationPlus.from_pretrained(
                 args.model_path,
